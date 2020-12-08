@@ -256,4 +256,5 @@ function diceHold(diceName) {
 3. add "remaining rolls counter"
 4. add padding to top of button
 5. remove one die
+6. add New Game Button
 */
