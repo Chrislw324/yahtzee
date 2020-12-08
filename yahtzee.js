@@ -4,7 +4,6 @@ let diceTwoHeld = false;
 let diceThreeHeld = false;
 let diceFourHeld = false;
 let diceFiveHeld = false;
-let diceSixHeld = false;
 
 function myFunction() {
   if (diceOneHeld === false) {
@@ -202,45 +201,6 @@ function myFunction() {
       dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
     }
   }
-  if (diceSixHeld === false) {
-    var num6 = (Math.floor(Math.random() * 6) + 1);
-    if (num6 === 1) {
-        var dieFace = document.getElementById("dieSix");
-        dieFace.innerHTML = "<span class='dot'></span>";
-        dieFace.classList.add("first-face");
-        dieFace.classList.remove("second-face", "third-face", "fourth-face", "fifth-face", "column");
-    } 
-    else if (num6 === 2) {
-      var dieFace = document.getElementById("dieSix");
-      dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span>";
-      dieFace.classList.add("second-face");
-      dieFace.classList.remove("first-face", "third-face", "fourth-face", "fifth-face", "column");
-    }
-    else if (num6 === 3) {
-      var dieFace = document.getElementById("dieSix");
-      dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span><span class='dot'></span";
-      dieFace.classList.add("third-face");
-      dieFace.classList.remove("first-face", "second-face", "fourth-face", "fifth-face", "column");
-    }
-    else if (num6 === 4) {
-      var dieFace = document.getElementById("dieSix");
-      dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-      dieFace.classList.add("fourth-face", "column");
-      dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-    }
-    else if (num6 === 5) {
-      var dieFace = document.getElementById("dieSix");
-      dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-      dieFace.classList.add("fifth-face", "column");
-      dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face");
-    }
-    else if (num6 === 6) {
-      var dieFace = document.getElementById("dieSix");
-      dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
-      dieFace.classList.add("fourth-face", "column");
-      dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-    }
-  }
 }
 
 function diceHold(diceName) {
@@ -286,19 +246,14 @@ function diceHold(diceName) {
       document.getElementById(diceName).style.backgroundColor = "tomato";
     }
   }
-  if (diceName === "dieSix") {
-    if (diceSixHeld === false) {
-      diceSixHeld = true;
-    } else {
-      diceSixHeld = false;
-      document.getElementById(diceName).style.backgroundColor = "tomato";
-    }
-  }
 }
 
   
 
 /* Homework
-1. change the CSS class and inner HTML so that die have correct dots
-2. create a function that returns the correct html based on the random number
+1.- make it so that I can only hold dice after rolling once
+2. set a maximum number of rolls to 3
+3. add "remaining rolls counter"
+4. add padding to top of button
+5. remove one die
 */
