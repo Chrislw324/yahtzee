@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Test</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="yahtzee.css">
+  <script src="yahtzee.js"></script>
+
+</head>
+
+<body>
+  <div id="board">
+    <div id="playArea">
+      <div id="dieOne" onclick="diceHold('dieOne')" class="dice"></div>
+      <div id="dieTwo" onclick="diceHold('dieTwo')" class="dice"></div>
+      <div id="dieThree" onclick="diceHold('dieThree')" class="dice"></div>
+      <div id="dieFour" onclick="diceHold('dieFour')" class="dice"></div>
+      <div id="dieFive" onclick="diceHold('dieFive')" class="dice"></div>
+      <div id="dieSix" onclick="diceHold('dieSix')" class="dice"></div>
+      <button id="button" onClick="myFunction()">Roll Die</button>
+    </div>
+
+    <div id="scoreArea">
+        <table id="top" class="score">
+          <tr>
+            <th>Ones</th>
+            <td id="onesScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Twos</th>
+            <td id="twosScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Threes</th>
+            <td id="threesScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Fours</th>
+            <td id="foursScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Fives</th>
+            <td id="fivesScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Sixes</th>
+            <td id="sixesScore"><input type="text" size="1"></td>
+          </tr>
+        </table>
+
+        <table id="upperScore" class="score">
+          <tr>
+            <th>Subtotal</th>
+            <td id="subtotalScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Bonus</th>
+            <td id="bonusScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Upper Total</th>
+            <td id="uppertotalScore"><input type="text" size="1"></td>
+          </tr>
+        </table>
+
+        <table id="bottom" class="score">
+          <tr>
+            <th>3 of a Kind</th>
+            <td id="3ofakindScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>4 of a Kind</th>
+            <td id="4ofakindScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Full House</th>
+            <td id="fullhouseScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Small Straight</th>
+            <td id="smallstraightScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Large Straight</th>
+            <td id="largestraightScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Chance</th>
+            <td id="chanceScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Yahtzee</th>
+            <td id="yahtzeeScore"><input type="text" size="1"></td>
+          </tr>
+        </table>
+        <table id="lowerScore" class="score">  
+          <tr>
+            <th>Lower Total</th>
+            <td id="lowertotalScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Upper Total</th>
+            <td id="uppertotalScore"><input type="text" size="1"></td>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <td id="totalScore"><input type="text" size="1"></td>
+          </tr>
+        </table>
+
+    </div> 
+
+  </div>
+</body>
+</html>

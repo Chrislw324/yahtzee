@@ -1,0 +1,144 @@
+#board {
+background-color: green;
+margin: 0 auto;
+height: 560px;
+width: 650px;
+}
+
+#scoreArea {
+  display: inline;
+  float: right;
+  background-color: white;
+  width: 170px;
+  margin: .5em;
+}
+
+table, tr, th, td {
+border: 1px solid red;
+}
+
+td {
+width: 30px
+}
+
+
+
+#top, #bottom  {
+margin-bottom: 5px;
+}
+
+th {
+  width: 110px;
+}
+
+#playArea {
+  float: left;
+  height: 600px;
+  width: 450px;
+}
+
+#upperScore {
+margin-bottom: 30px;
+}
+
+#dieSix, #dieFive, #dieFour, #dieThree, #dieTwo, #dieOne {
+  float: right;
+  margin-top: 200px;
+}
+
+#button {
+  margin-left: 220px;
+}
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-family: sans-serif;
+}
+
+
+
+.dice {
+  padding: 4px;
+  background-color: tomato;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+
+.dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-face .dot:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.third-face .dot:nth-of-type(1) {
+  align-self: flex-end;
+}
+
+.third-face .dot:nth-of-type(2) {
+  align-self: center;
+}
+
+.fourth-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fourth-face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fifth-face {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fifth-face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+  justify-content: center;
+}
+
+/* instead of centering the button, i moved its left margin over 220 px
+   instead of centering the die, I moved them down from the top 200 px
+*/
