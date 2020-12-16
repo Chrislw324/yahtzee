@@ -7,6 +7,29 @@ let diceFiveHeld = false;
 let numRoll = 0;
 let remainingRolls = 3;
 
+
+function newGame() {
+  numRoll = 0;
+  remainingRolls = 3;
+  diceOneHeld = false;
+  diceTwoHeld = false;
+  diceThreeHeld = false;
+  diceFourHeld = false;
+  diceFiveHeld = false;
+  let dieList = ["dieOne", "dieTwo", "dieThree", "dieFour", "dieFive"];
+  for (let i = 0; i < 5; i++) {
+    let dieToChange = dieList[i];
+    let dieFace = document.getElementById(dieToChange);
+    dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face", "fifth-face", "column");
+    dieFace.style.backgroundColor = "tomato";
+    dieFace.innerHTML = null;
+  }
+  let resetRolls = document.getElementById("remainingRolls");
+  resetRolls.innerHTML = remainingRolls;
+}
+
+
+
 function rollDice() {
   numRoll++;
   remainingRolls--;
@@ -123,6 +146,5 @@ function displayDie(value, id) {
 
 
 /* Homework
-1. get new game button working
-2. total score after 3 rolls
+1. total score after 3 rolls
 */
