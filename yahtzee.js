@@ -6,7 +6,7 @@ let diceFourHeld = false;
 let diceFiveHeld = false;
 let numRoll = 0;
 
-function myFunction() {
+function rollDice() {
   numRoll++;
   if (numRoll > 3) {
     return;
