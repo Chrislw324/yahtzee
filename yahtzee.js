@@ -210,6 +210,9 @@ if (diceFiveHeld === false) {
   }
 
 function diceHold(diceName) {
+  if (numRoll === 0 || numRoll === 3) {
+    return;
+  }
   document.getElementById(diceName).style.backgroundColor = "blue";
   holdNum = true;
   if (diceName === "dieOne") {
@@ -257,7 +260,5 @@ function diceHold(diceName) {
   
 
 /* Homework
-1.- make it so that I can only hold dice after rolling once
-3. add "remaining rolls counter"
-5. rename "myfunction" to something better
+1.add "remaining rolls counter"
 */
