@@ -9,8 +9,9 @@ width: 650px;
   display: inline;
   float: right;
   background-color: white;
-  width: 170px;
+  width: 155px;
   margin: .5em;
+  padding: .25em;
 }
 
 table, tr, th, td {
