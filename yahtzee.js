@@ -5,13 +5,17 @@ let diceThreeHeld = false;
 let diceFourHeld = false;
 let diceFiveHeld = false;
 let numRoll = 0;
+let remainingRolls = 3;
 
 function rollDice() {
   numRoll++;
+  remainingRolls--;
   if (numRoll > 3) {
     return;
   }
-  console.log(numRoll);
+  let rollCounter = document.getElementById("remainingRolls");
+  rollCounter.innerHTML = remainingRolls;
+
   if (diceOneHeld === false) {
       var num1 = (Math.floor(Math.random() * 6) + 1);
   if (num1 === 1) {
@@ -210,7 +214,7 @@ if (diceFiveHeld === false) {
   }
 
 function diceHold(diceName) {
-  if (numRoll === 0 || numRoll === 3) {
+  if (numRoll === 0 || numRoll >= 3) {
     return;
   }
   document.getElementById(diceName).style.backgroundColor = "blue";
@@ -260,5 +264,6 @@ function diceHold(diceName) {
   
 
 /* Homework
-1.add "remaining rolls counter"
+1. get new game button working
+2. total score after 3 rolls
 */
