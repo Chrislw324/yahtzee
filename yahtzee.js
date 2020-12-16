@@ -15,203 +15,27 @@ function rollDice() {
   }
   let rollCounter = document.getElementById("remainingRolls");
   rollCounter.innerHTML = remainingRolls;
-
   if (diceOneHeld === false) {
       var num1 = (Math.floor(Math.random() * 6) + 1);
-  if (num1 === 1) {
-      var dieFace = document.getElementById("dieOne");
-      dieFace.innerHTML = "<span class='dot'></span>";
-      dieFace.classList.add("first-face");
-      dieFace.classList.remove("second-face", "third-face", "fourth-face", "fifth-face", "column");
-  } 
-  else if (num1 === 2) {
-    var dieFace = document.getElementById("dieOne");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span>";
-    dieFace.classList.add("second-face");
-    dieFace.classList.remove("first-face", "third-face", "fourth-face", "fifth-face", "column");
+      displayDie(num1, "dieOne");
   }
-  else if (num1 === 3) {
-    var dieFace = document.getElementById("dieOne");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span><span class='dot'></span";
-    dieFace.classList.add("third-face");
-    dieFace.classList.remove("first-face", "second-face", "fourth-face", "fifth-face", "column");
+  if (diceTwoHeld === false) {
+    var num2 = (Math.floor(Math.random() * 6) + 1);
+    displayDie(num2, "dieTwo");
   }
-  else if (num1 === 4) {
-    var dieFace = document.getElementById("dieOne");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
+  if (diceThreeHeld === false) {
+    var num3 = (Math.floor(Math.random() * 6) + 1);
+    displayDie(num3, "dieThree");
   }
-  else if (num1 === 5) {
-    var dieFace = document.getElementById("dieOne");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fifth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face");
+  if (diceFourHeld === false) {
+  let num4 = (Math.floor(Math.random() * 6) + 1);
+  displayDie(num4, "dieFour");
   }
-  else if (num1 === 6) {
-    var dieFace = document.getElementById("dieOne");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
+  if (diceFiveHeld === false) {
+    let num5 = (Math.floor(Math.random() * 6) + 1);
+    displayDie(num5, "dieFive");
   }
 }
-if (diceTwoHeld === false) {
-  var num2 = (Math.floor(Math.random() * 6) + 1);
-  if (num2 === 1) {
-      var dieFace = document.getElementById("dieTwo");
-      dieFace.innerHTML = "<span class='dot'></span>";
-      dieFace.classList.add("first-face");
-      dieFace.classList.remove("second-face", "third-face", "fourth-face", "fifth-face", "column");
-  } 
-  else if (num2 === 2) {
-    var dieFace = document.getElementById("dieTwo");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span>";
-    dieFace.classList.add("second-face");
-    dieFace.classList.remove("first-face", "third-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num2 === 3) {
-    var dieFace = document.getElementById("dieTwo");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span><span class='dot'></span";
-    dieFace.classList.add("third-face");
-    dieFace.classList.remove("first-face", "second-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num2 === 4) {
-    var dieFace = document.getElementById("dieTwo");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-  else if (num2 === 5) {
-    var dieFace = document.getElementById("dieTwo");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fifth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face");
-  }
-  else if (num2 === 6) {
-    var dieFace = document.getElementById("dieTwo");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-}
-if (diceThreeHeld === false) {
-  var num3 = (Math.floor(Math.random() * 6) + 1);
-  if (num3 === 1) {
-      var dieFace = document.getElementById("dieThree");
-      dieFace.innerHTML = "<span class='dot'></span>";
-      dieFace.classList.add("first-face");
-      dieFace.classList.remove("second-face", "third-face", "fourth-face", "fifth-face", "column");
-  } 
-  else if (num3 === 2) {
-    var dieFace = document.getElementById("dieThree");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span>";
-    dieFace.classList.add("second-face");
-    dieFace.classList.remove("first-face", "third-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num3 === 3) {
-    var dieFace = document.getElementById("dieThree");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span><span class='dot'></span";
-    dieFace.classList.add("third-face");
-    dieFace.classList.remove("first-face", "second-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num3 === 4) {
-    var dieFace = document.getElementById("dieThree");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-  else if (num3 === 5) {
-    var dieFace = document.getElementById("dieThree");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fifth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face");
-  }
-  else if (num3 === 6) {
-    var dieFace = document.getElementById("dieThree");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-}
-if (diceFourHeld === false) {
-  var num4 = (Math.floor(Math.random() * 6) + 1);
-  if (num4 === 1) {
-      var dieFace = document.getElementById("dieFour");
-      dieFace.innerHTML = "<span class='dot'></span>";
-      dieFace.classList.add("first-face");
-      dieFace.classList.remove("second-face", "third-face", "fourth-face", "fifth-face", "column");
-  } 
-  else if (num4 === 2) {
-    var dieFace = document.getElementById("dieFour");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span>";
-    dieFace.classList.add("second-face");
-    dieFace.classList.remove("first-face", "third-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num4 === 3) {
-    var dieFace = document.getElementById("dieFour");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span><span class='dot'></span";
-    dieFace.classList.add("third-face");
-    dieFace.classList.remove("first-face", "second-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num4 === 4) {
-    var dieFace = document.getElementById("dieFour");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-  else if (num4 === 5) {
-    var dieFace = document.getElementById("dieFour");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fifth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face");
-  }
-  else if (num4 === 6) {
-    var dieFace = document.getElementById("dieFour");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-}
-if (diceFiveHeld === false) {
-  var num5 = (Math.floor(Math.random() * 6) + 1);
-  if (num5 === 1) {
-      var dieFace = document.getElementById("dieFive");
-      dieFace.innerHTML = "<span class='dot'></span>";
-      dieFace.classList.add("first-face");
-      dieFace.classList.remove("second-face", "third-face", "fourth-face", "fifth-face", "column");
-  } 
-  else if (num5 === 2) {
-    var dieFace = document.getElementById("dieFive");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span>";
-    dieFace.classList.add("second-face");
-    dieFace.classList.remove("first-face", "third-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num5 === 3) {
-    var dieFace = document.getElementById("dieFive");
-    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span><span class='dot'></span";
-    dieFace.classList.add("third-face");
-    dieFace.classList.remove("first-face", "second-face", "fourth-face", "fifth-face", "column");
-  }
-  else if (num5 === 4) {
-    var dieFace = document.getElementById("dieFive");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-  else if (num5 === 5) {
-    var dieFace = document.getElementById("dieFive");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fifth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face");
-  }
-  else if (num5 === 6) {
-    var dieFace = document.getElementById("dieFive");
-    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
-    dieFace.classList.add("fourth-face", "column");
-    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
-  }
-}
-  }
 
 function diceHold(diceName) {
   if (numRoll === 0 || numRoll >= 3) {
@@ -260,8 +84,43 @@ function diceHold(diceName) {
     }
   }
 }
-
   
+function displayDie(value, id) {
+  let dieFace = document.getElementById(id);
+  if (value === 1) {
+    dieFace.innerHTML = "<span class='dot'></span>";
+    dieFace.classList.add("first-face");
+    dieFace.classList.remove("second-face", "third-face", "fourth-face", "fifth-face", "column");
+  } 
+  else if (value === 2) {
+    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span>";
+    dieFace.classList.add("second-face");
+    dieFace.classList.remove("first-face", "third-face", "fourth-face", "fifth-face", "column");
+  }
+  else if (value === 3) {
+    dieFace.innerHTML = "<span class='dot'></span><span class='dot'></span><span class='dot'></span";
+    dieFace.classList.add("third-face");
+    dieFace.classList.remove("first-face", "second-face", "fourth-face", "fifth-face", "column");
+  }
+  else if (value === 4) {
+    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
+    dieFace.classList.add("fourth-face", "column");
+    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
+  }
+  else if (value === 5) {
+    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span></div>";
+    dieFace.classList.add("fifth-face", "column");
+    dieFace.classList.remove("first-face", "second-face", "third-face", "fourth-face");
+  }
+  else if (value === 6) {
+    dieFace.innerHTML = "<div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div><div class='column'><span class='dot'></span><span class='dot'></span><span class='dot'></span></div>";
+    dieFace.classList.add("fourth-face", "column");
+    dieFace.classList.remove("first-face", "second-face", "third-face", "fifth-face");
+  }
+}
+
+
+
 
 /* Homework
 1. get new game button working
