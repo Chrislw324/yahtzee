@@ -10,6 +10,11 @@ const fullHouse = 25;
 const smallStraight = 30;
 const largeStraight = 40;
 const yahtzee = 50;
+let num1;
+let num2;
+let num3;
+let num4;
+let num5;
 
 function newGame() {
   numRoll = 0;
@@ -109,12 +114,6 @@ function rollDice() {
     rotationDirection5 = "-";
   }
 
-
-
-
-
-
-
   let rotationVal1 = (Math.floor(Math.random() * 90) + 15);
   let rotationVal2 = (Math.floor(Math.random() * 90) + 15);
   let rotationVal3 = (Math.floor(Math.random() * 90) + 15);
@@ -123,31 +122,31 @@ function rollDice() {
 
 
   if (diceOneHeld === false) {
-    var num1 = (Math.floor(Math.random() * 6) + 1);
+    num1 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num1, "dieOne");
     document.getElementById("dieOne").style.transform = "translate(0px, -" + moveVal1 + "px)";
     document.getElementById("dieOne").style.transform += "rotate(" + rotationDirection1 + rotationVal1 + "deg)";
   }
   if (diceTwoHeld === false) {
-    var num2 = (Math.floor(Math.random() * 6) + 1);
+    num2 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num2, "dieTwo");
     document.getElementById("dieTwo").style.transform = "translate(0px, -" + moveVal2 + "px)";
     document.getElementById("dieTwo").style.transform += "rotate(" + rotationDirection2 + rotationVal2 + "deg)";
   }
   if (diceThreeHeld === false) {
-    var num3 = (Math.floor(Math.random() * 6) + 1);
+    num3 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num3, "dieThree");
     document.getElementById("dieThree").style.transform = "translate(0px, -" + moveVal3 + "px)";
     document.getElementById("dieThree").style.transform += "rotate(" + rotationDirection3 + rotationVal3 + "deg)";
   }
   if (diceFourHeld === false) {
-    var num4 = (Math.floor(Math.random() * 6) + 1);
+    num4 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num4, "dieFour");
     document.getElementById("dieFour").style.transform = "translate(0px, -" + moveVal4 + "px)";
     document.getElementById("dieFour").style.transform += "rotate(" + rotationDirection4 + rotationVal4 + "deg)";
   }
   if (diceFiveHeld === false) {
-    var num5 = (Math.floor(Math.random() * 6) + 1);
+    num5 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num5, "dieFive");
     document.getElementById("dieFive").style.transform = "translate(0px, -" + moveVal5 + "px)";
     document.getElementById("dieFive").style.transform += "rotate(" + rotationDirection5 + rotationVal5 + "deg)";
@@ -155,7 +154,6 @@ function rollDice() {
 
   //^^^^^^^^^Start of Scoring Section^^^^^^^^^^^^^^
   if (remainingRolls === 0) {
-
     let finalRoll = [];
     finalRoll.push(num1, num2, num3, num4, num5);
     let diceTotal = (num1 + num2 + num3 + num4 + num5);
@@ -181,7 +179,7 @@ function rollDice() {
       else if (finalRoll[i] === 5) {
         numOfFives++;
       }
-      else {
+      else if (finalRoll[i] === 6) {
         numOfSixes++;
       }
     }
@@ -362,7 +360,7 @@ function displayDie(value, id) {
 
 /* Homework
 Reset button works.
-Game totals up score. However, will not include held dice in score.
+
 
 1. at end of each round, all possible scores should be displayed in a color that stands out.
 2. when I click which score I want to choose, the score turns black, other scores disappear, remaining rolls resets to 3, 
