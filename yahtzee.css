@@ -43,7 +43,7 @@ margin-bottom: 30px;
 
 #dieSix, #dieFive, #dieFour, #dieThree, #dieTwo, #dieOne {
   float: right;
-  margin-top: 200px;
+  margin-top: 300px;
 }
 
 
@@ -72,7 +72,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 10%;
-  margin-right: 10px;
+  margin-right: 25px;
   text-align: center;
   font-size: 1.2em;
 }
@@ -139,6 +139,16 @@ body {
 
 .fifth-face .column:nth-of-type(2) {
   justify-content: center;
+}
+
+#heldArea {
+  border-bottom: 3px solid black;
+  margin-top: 50px;
+}
+
+#heldArea h2 {
+  margin: auto;
+  text-align: center;
 }
 
 /* instead of centering the button, i moved its left margin over 220 px

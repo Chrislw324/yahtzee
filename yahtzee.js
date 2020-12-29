@@ -57,25 +57,100 @@ function rollDice() {
   }
   let rollCounter = document.getElementById("remainingRolls");
   rollCounter.innerHTML = remainingRolls;
+  let moveVal1 = (Math.floor(Math.random() * 200) + 1);
+  let moveVal2 = (Math.floor(Math.random() * 200) + 1);
+  let moveVal3 = (Math.floor(Math.random() * 200) + 1);
+  let moveVal4 = (Math.floor(Math.random() * 200) + 1);
+  let moveVal5 = (Math.floor(Math.random() * 200) + 1);
+
+
+  let posOrNeg1 = (Math.floor(Math.random() * 2) + 1);  //for deciding if dice rotation will be left or right
+  let rotationDirection1;
+  if (posOrNeg1 === 1) {
+    rotationDirection1 = "+";
+    }
+  else {
+    rotationDirection1 = "-";
+  }
+
+  let posOrNeg2 = (Math.floor(Math.random() * 2) + 1);  //for deciding if dice rotation will be left or right
+  let rotationDirection2;
+  if (posOrNeg2 === 1) {
+    rotationDirection2 = "+";
+    }
+  else {
+    rotationDirection2 = "-";
+  }
+
+  let posOrNeg3 = (Math.floor(Math.random() * 2) + 1);  //for deciding if dice rotation will be left or right
+  let rotationDirection3;
+  if (posOrNeg3 === 1) {
+    rotationDirection3 = "+";
+    }
+  else {
+    rotationDirection3 = "-";
+  }
+
+  let posOrNeg4 = (Math.floor(Math.random() * 2) + 1);  //for deciding if dice rotation will be left or right
+  let rotationDirection4;
+  if (posOrNeg4 === 1) {
+    rotationDirection4 = "+";
+    }
+  else {
+    rotationDirection4 = "-";
+  }
+
+  let posOrNeg5 = (Math.floor(Math.random() * 2) + 1);  //for deciding if dice rotation will be left or right
+  let rotationDirection5;
+  if (posOrNeg5 === 1) {
+    rotationDirection5 = "+";
+    }
+  else {
+    rotationDirection5 = "-";
+  }
+
+
+
+
+
+
+
+  let rotationVal1 = (Math.floor(Math.random() * 90) + 15);
+  let rotationVal2 = (Math.floor(Math.random() * 90) + 15);
+  let rotationVal3 = (Math.floor(Math.random() * 90) + 15);
+  let rotationVal4 = (Math.floor(Math.random() * 90) + 15);
+  let rotationVal5 = (Math.floor(Math.random() * 90) + 15);
+
+
   if (diceOneHeld === false) {
     var num1 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num1, "dieOne");
+    document.getElementById("dieOne").style.transform = "translate(0px, -" + moveVal1 + "px)";
+    document.getElementById("dieOne").style.transform += "rotate(" + rotationDirection1 + rotationVal1 + "deg)";
   }
   if (diceTwoHeld === false) {
     var num2 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num2, "dieTwo");
+    document.getElementById("dieTwo").style.transform = "translate(0px, -" + moveVal2 + "px)";
+    document.getElementById("dieTwo").style.transform += "rotate(" + rotationDirection2 + rotationVal2 + "deg)";
   }
   if (diceThreeHeld === false) {
     var num3 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num3, "dieThree");
+    document.getElementById("dieThree").style.transform = "translate(0px, -" + moveVal3 + "px)";
+    document.getElementById("dieThree").style.transform += "rotate(" + rotationDirection3 + rotationVal3 + "deg)";
   }
   if (diceFourHeld === false) {
     var num4 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num4, "dieFour");
+    document.getElementById("dieFour").style.transform = "translate(0px, -" + moveVal4 + "px)";
+    document.getElementById("dieFour").style.transform += "rotate(" + rotationDirection4 + rotationVal4 + "deg)";
   }
   if (diceFiveHeld === false) {
     var num5 = (Math.floor(Math.random() * 6) + 1);
     displayDie(num5, "dieFive");
+    document.getElementById("dieFive").style.transform = "translate(0px, -" + moveVal5 + "px)";
+    document.getElementById("dieFive").style.transform += "rotate(" + rotationDirection5 + rotationVal5 + "deg)";
   }
 
   //^^^^^^^^^Start of Scoring Section^^^^^^^^^^^^^^
@@ -206,14 +281,14 @@ function diceHold(diceName) {
   if (numRoll === 0 || numRoll >= 3) {
     return;
   }
-  document.getElementById(diceName).style.backgroundColor = "blue";
+  document.getElementById(diceName).style.transform = "translate(0px, 200px)";
   holdNum = true;
   if (diceName === "dieOne") {
     if (diceOneHeld === false) {
       diceOneHeld = true;
     } else {
       diceOneHeld = false;
-      document.getElementById(diceName).style.backgroundColor = "tomato";
+      document.getElementById(diceName).style.transform = "translate(0px, 0px)";
     }
   }
   if (diceName === "dieTwo") {
@@ -221,7 +296,7 @@ function diceHold(diceName) {
       diceTwoHeld = true;
     } else {
       diceTwoHeld = false;
-      document.getElementById(diceName).style.backgroundColor = "tomato";
+      document.getElementById(diceName).style.transform = "translate(0px, 0px)";
     }
   }
   if (diceName === "dieThree") {
@@ -229,7 +304,7 @@ function diceHold(diceName) {
       diceThreeHeld = true;
     } else {
       diceThreeHeld = false;
-      document.getElementById(diceName).style.backgroundColor = "tomato";
+      document.getElementById(diceName).style.transform = "translate(0px, 0px)";
     }
   }
   if (diceName === "dieFour") {
@@ -237,7 +312,7 @@ function diceHold(diceName) {
       diceFourHeld = true;
     } else {
       diceFourHeld = false;
-      document.getElementById(diceName).style.backgroundColor = "tomato";
+      document.getElementById(diceName).style.transform = "translate(0px, 0px)";
     }
   }
   if (diceName === "dieFive") {
@@ -245,7 +320,7 @@ function diceHold(diceName) {
       diceFiveHeld = true;
     } else {
       diceFiveHeld = false;
-      document.getElementById(diceName).style.backgroundColor = "tomato";
+      document.getElementById(diceName).style.transform = "translate(0px, 0px)";
     }
   }
 }
@@ -299,4 +374,5 @@ dice faces disappear, dice are able to be rolled again.
 7. center dice in playing area
 8. instead of blue dice, create a held dice area at bottom of playing area
 9. when dice are rolled, they move upwards and tilt, rotate
+10. if all dice held, should not be able to click roll button
 */
